@@ -5,6 +5,7 @@ def print_stats(data: list[Book]):
     print("-"*40)
     view_authors_stats(data)
     print("-"*40)
+    print(f"Всего книг прочитано: {len(data)}")
 
 def view_authors_stats(data: list[Book]):
     print("Статистика по авторам:\n")
