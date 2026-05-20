@@ -44,7 +44,9 @@ class Storage():
     def add_book(self):
         name = input("Введите название книги: ")
         author = input("Введите автора книги: ")
-        if any()
+        if any(i.name == name and i.author == author for i in self.data):
+            print("Книга с этим названием и автором уже была добавлена.")
+            return
         date = input("Введите даты прочтения книги: ")
         rating = input("Введите оценку книги (1-5): ")
         while True:
