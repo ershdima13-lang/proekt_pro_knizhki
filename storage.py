@@ -6,10 +6,10 @@ class Storage():
     def __init__(self):
         self.data: list[Book] = self.load_data()
 
-    def save_data(self, data: list[Book], filename="saved_data.json"):
+    def save_data(self, filename="saved_data.json"):
         with open(filename, "w", encoding="utf-8") as file:
             to_save = []
-            for i in data: to_save.append({
+            for i in self.data: to_save.append({
                 "author":i.author, 
                 "name":i.name, 
                 "rating":i.rating, 
