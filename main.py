@@ -4,8 +4,7 @@ from stats import Stats
 class Main():
     def __init__(self):
         self.storage = Storage()
-        self.data = self.storage.load_data()
-        self.stats = Stats(self.data)
+        self.stats = Stats(self.storage.data)
 
     def main(self):
         while True:
@@ -29,6 +28,10 @@ class Main():
                 self.stats.view_authors_stats()
             elif command == '5':
                 self.storage.delete_book_by_name()
-            elif command == ''
+            elif command == '6':
+                self.storage.save_data()
+                break
+            else:
+                print("Неизвестная команда. Введите число от 1 до 6.\n")
 
 Main().main()
