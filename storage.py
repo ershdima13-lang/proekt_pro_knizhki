@@ -40,3 +40,10 @@ class Storage():
                 self.data.pop(i)
                 break
         print("В библиотеке нет книги с таким названием!")
+
+    def add_book(self):
+        name = input("Введите название книги: ")
+        author = input("Введите автора книги: ")
+        date = input("Введите даты прочтения книги: ")
+        rating = input("Введите оценку книги (1-5): ")
+        rating = (max(1, min(5, int(rating))))
