@@ -20,7 +20,12 @@ class Stats():
             avg = sum(author_ratings) / len(author_ratings)
             print(f"{k}:\n\tСредняя оценка: {avg}\n\tКниги: {author_books}")
 
-    def view_avg(self):
+    def view_all(self):
         print(f"Всего книг прочитано: {len(self.data)}")
         for i in self.data:
             print(f"* Название: {i.name}, автор: {i.author}, оценка: {i.rating}, дата прочтения: {i.date}")
+
+    def view_avg(self):
+        sum = 0
+        for i in self.data: sum += i.rating
+        print(f"Ваша средняя оценка: {sum/len(self.data)} баллов.")
