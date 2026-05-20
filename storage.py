@@ -46,4 +46,10 @@ class Storage():
         author = input("Введите автора книги: ")
         date = input("Введите даты прочтения книги: ")
         rating = input("Введите оценку книги (1-5): ")
-        rating = (max(1, min(5, int(rating))))
+        while True:
+            try:
+                rating = (max(1, min(5, int(rating))))
+                break
+            except ValueError:
+                print("Введите число!")
+        self.data.append(Book(name, author, rating, date))
